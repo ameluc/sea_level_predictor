@@ -17,7 +17,7 @@ import pandas as pd
 from scipy.stats import linregress
 # import seaborn as sns
 
-PATH = "./epa-sea-level.csv"
+DATA_PATH = "./epa-sea-level.csv"
 
 def draw_plot():
     """
@@ -29,7 +29,7 @@ def draw_plot():
          A visualisation figure
     """
 
-    df = pd.read_csv(PATH)
+    df = pd.read_csv(DATA_PATH)
     df["Year"] = df["Year"].astype("int16")
     df_new_trend = df[df["Year"] >= 2000]
     year_range_old = pd.Series(range(1880, 2051))
@@ -68,7 +68,7 @@ def draw_plot():
 #          A visualisation figure
 #     """
 
-#     df = pd.read_csv(PATH)
+#     df = pd.read_csv(DATA_PATH)
 #     df["Year"] = df["Year"].astype("int16")
 #     df_new_only = df[df["Year"] >= 2000]
 #     large_years = np.arange(1880, 2051)
